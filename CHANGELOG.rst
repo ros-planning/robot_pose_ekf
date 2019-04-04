@@ -2,6 +2,19 @@
 Changelog for package robot_pose_ekf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#3 <https://github.com/ros-planning/robot_pose_ekf//issues/3>`_ from k-okada/update_maintainer
+  Change maintainer to ROS Orphaned Package Maintainers
+* Change maintainer to ROS Orphaned Package Maintainers
+* Merge pull request `#1 <https://github.com/ros-planning/robot_pose_ekf//issues/1>`_ from k-okada/master
+  robot_pose_ekf back to melodic
+* Merge remote-tracking branch 'k-okada/add_travis'
+* update travis.yml
+* Merge branch 'kinetic-devel'
+* first commit
+* Contributors: Kei Okada
+
 1.14.4 (2018-06-19)
 -------------------
 * Merge pull request `#713 <https://github.com/ros-planning/navigation/issues/713>`_ from garethellis0/kinetic-devel
