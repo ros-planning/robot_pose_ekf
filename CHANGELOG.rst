@@ -2,8 +2,8 @@
 Changelog for package robot_pose_ekf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.14.5 (2019-04-04)
+-------------------
 * Merge pull request `#3 <https://github.com/ros-planning/robot_pose_ekf//issues/3>`_ from k-okada/update_maintainer
   Change maintainer to ROS Orphaned Package Maintainers
 * Change maintainer to ROS Orphaned Package Maintainers
