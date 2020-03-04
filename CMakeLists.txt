@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.0.2)
 project(robot_pose_ekf)
 
 # bfl (Bayesian Filtering Library) is a third party package that uses pkg-config
