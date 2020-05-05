@@ -7,7 +7,6 @@
 
     </description>
     <author>Wim Meeussen</author>
-    <author>contradict@gmail.com</author>
     <maintainer email="ros-orphaned-packages@googlegroups.com">ROS Orphaned Package Maintainers</maintainer>
     <license>BSD</license>
     <url>http://wiki.ros.org/robot_pose_ekf</url>
