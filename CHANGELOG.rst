@@ -2,6 +2,21 @@
 Changelog for package robot_pose_ekf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#13 <https://github.com/ros-planning/robot_pose_ekf/issues/13>`_ from k-okada/add_travis_noetic
+  Close `#12 <https://github.com/ros-planning/robot_pose_ekf/issues/12>`_
+* use format3 to support both nfl and liborocos-blf-dev
+* fixed bfl dependency to be liborocos-bfl-dev
+* fixed bfl dependency to be liborocos-bfl
+* updated wtf.py to be python3 compatible
+* fixed travis.yml for build checks
+* Merge pull request `#8 <https://github.com/ros-planning/robot_pose_ekf/issues/8>`_ from contradict/patch-1
+  Remove email from package.xml
+* Remove email from package.xml
+  I did work on the package several years ago (a port to a new version of ROS), but I am not the author and also not the person named here. Would you mind removing my email from the package?
+* Contributors: Dave Feil-Seifer, Kei Okada, Michael Ferguson, contradict
+
 1.14.5 (2019-04-04)
 -------------------
 * Merge pull request `#3 <https://github.com/ros-planning/robot_pose_ekf//issues/3>`_ from k-okada/update_maintainer
