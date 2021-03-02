@@ -2,8 +2,8 @@
 Changelog for package robot_pose_ekf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.15.0 (2021-03-02)
+-------------------
 * Merge pull request `#13 <https://github.com/ros-planning/robot_pose_ekf/issues/13>`_ from k-okada/add_travis_noetic
   Close `#12 <https://github.com/ros-planning/robot_pose_ekf/issues/12>`_
 * use format3 to support both nfl and liborocos-blf-dev
