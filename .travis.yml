@@ -16,7 +16,6 @@ env:
     - CHECK_PYTHON3_COMPILE=true
 #    - ROS_DISTRO_NAME=indigo  OS_NAME=ubuntu OS_CODE_NAME=trusty ARCH=amd64
     - ROS_DISTRO_NAME=kinetic OS_NAME=ubuntu OS_CODE_NAME=xenial ARCH=amd64
-    - ROS_DISTRO_NAME=lunar   OS_NAME=ubuntu OS_CODE_NAME=xenial ARCH=amd64
     - ROS_DISTRO_NAME=melodic OS_NAME=ubuntu OS_CODE_NAME=bionic ARCH=amd64
     - ROS_DISTRO_NAME=noetic OS_NAME=ubuntu OS_CODE_NAME=focal ARCH=amd64
 #   matrix:
