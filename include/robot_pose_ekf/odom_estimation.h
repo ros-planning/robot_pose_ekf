@@ -59,6 +59,7 @@
 
 // log files
 #include <fstream>
+#include <memory>
 
 namespace estimation
 {
