@@ -295,7 +295,7 @@ namespace estimation
       base_imu_offset = tf_buffer_->lookupTransform(base_footprint_frame_, imu->header.frame_id, imu_stamp_);
     } catch(tf2::TransformException& ex) {
       // TODO: what to do here?
-      std::cout << "" << std::endl;
+      std::cout << "ERROR (lookupTransform) - OdomEstimationNode::imuCallback()" << std::endl;
     }
 
     Transform base_imu_offset_tf;
