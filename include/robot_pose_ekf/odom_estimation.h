@@ -181,8 +181,16 @@ private:
   // tf2_ros::TransformListener tf_listener_;
   
   std::string output_frame_;
-  std::string hidden_odom_frame_;
   std::string base_footprint_frame_;
+
+
+  std::string hidden_output_frame_ = "hidden_output";
+  std::string hidden_odom_frame_ = "hidden_odom";
+  std::string hidden_imu_frame_ = "hidden_imu";
+  std::string hidden_vo_frame_ = "hidden_vo";
+  std::string hidden_gps_frame_ = "hidden_gps";
+  
+  
 
 }; // class
 

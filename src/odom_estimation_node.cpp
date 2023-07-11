@@ -218,7 +218,7 @@ namespace estimation
     tf2::convert(odom_meas_.inverse(), odom_meas_inv.transform);
     odom_meas_inv.header.stamp = odom_stamp_;
     odom_meas_inv.header.frame_id = base_footprint_frame_;
-    odom_meas_inv.child_frame_id = "wheelodom";
+    odom_meas_inv.child_frame_id = "hidden_odom";
 
     my_filter_->addMeasurement(odom_meas_inv, odom_covariance_);
     
@@ -320,7 +320,7 @@ namespace estimation
     tf2::convert(imu_meas_.inverse(), imu_meas_inv.transform);
     imu_meas_inv.header.stamp = imu_stamp_;
     imu_meas_inv.header.frame_id = base_footprint_frame_;
-    imu_meas_inv.child_frame_id = "imu";
+    imu_meas_inv.child_frame_id = "hidden_imu";
     my_filter_->addMeasurement(imu_meas_inv, imu_covariance_);
     
     // activate imu
@@ -380,7 +380,7 @@ namespace estimation
     tf2::convert(vo_meas_.inverse(), vo_meas_inv.transform);
     vo_meas_inv.header.stamp = vo_stamp_;
     vo_meas_inv.header.frame_id = base_footprint_frame_;
-    vo_meas_inv.child_frame_id = "vo";
+    vo_meas_inv.child_frame_id = "hidden_vo";
     my_filter_->addMeasurement(vo_meas_inv, vo_covariance_);
     
     // activate vo
@@ -445,7 +445,7 @@ namespace estimation
     tf2::convert(gps_meas_.inverse(), gps_meas_inv.transform);
     gps_meas_inv.header.stamp = gps_stamp_;
     gps_meas_inv.header.frame_id = base_footprint_frame_;
-    gps_meas_inv.child_frame_id = "gps";
+    gps_meas_inv.child_frame_id = "hidden_gps";
     my_filter_->addMeasurement(gps_meas_inv, gps_covariance_);
     
     // activate gps
