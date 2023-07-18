@@ -38,9 +38,11 @@
 
 // ros stuff
 #include <ros/ros.h>
-#include <tf/tf.h>
-#include <tf/transform_listener.h>
-#include <tf/transform_broadcaster.h>
+
+#include <tf2/transform_datatypes.h>
+#include <tf2_ros/transform_broadcaster.h>
+#include <tf2_ros/transform_listener.h>
+
 #include "odom_estimation.h"
 #include <robot_pose_ekf/GetStatus.h>
 
@@ -55,6 +57,7 @@
 
 // log files
 #include <fstream>
+#include <memory>
 
 namespace estimation
 {
@@ -110,20 +113,25 @@ private:
   ros::ServiceServer state_srv_;
 
   // ekf filter
-  OdomEstimation my_filter_;
+  std::shared_ptr<OdomEstimation> my_filter_;
 
   // estimated robot pose message to send
   geometry_msgs::PoseWithCovarianceStamped  output_; 
 
   // robot state
-  tf::TransformListener    robot_state_;
-  tf::TransformBroadcaster odom_broadcaster_;
+  // tf transformer
+  std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
+  std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
+
+
+  // tf::TransformListener    robot_state_;
+  // tf::TransformBroadcaster odom_broadcaster_;
 
   // vectors
-  tf::Transform odom_meas_, imu_meas_, vo_meas_, gps_meas_;
-  tf::Transform base_vo_init_;
-  tf::Transform base_gps_init_;
-  tf::StampedTransform camera_base_;
+  tf2::Transform odom_meas_, imu_meas_, vo_meas_, gps_meas_;
+  tf2::Transform base_vo_init_;
+  tf2::Transform base_gps_init_;
+  geometry_msgs::TransformStamped camera_base_;
   ros::Time odom_time_, imu_time_, vo_time_, gps_time_;
   ros::Time odom_stamp_, imu_stamp_, vo_stamp_, gps_stamp_, filter_stamp_;
   ros::Time odom_init_stamp_, imu_init_stamp_, vo_init_stamp_, gps_init_stamp_;

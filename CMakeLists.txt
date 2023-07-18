@@ -11,7 +11,9 @@ link_directories(${BFL_LIBRARY_DIRS})
 find_package(catkin REQUIRED
         COMPONENTS
             roscpp
-            tf
+            tf2
+            tf2_ros
+            tf2_geometry_msgs
             nav_msgs
             std_msgs
             geometry_msgs
@@ -50,15 +52,18 @@ include_directories(
     )
 
 add_executable(robot_pose_ekf 
-                       src/odom_estimation.cpp 
-                       src/nonlinearanalyticconditionalgaussianodo.cpp 
-                       src/odom_estimation_node.cpp)
+                src/odom_estimation.cpp 
+                src/nonlinearanalyticconditionalgaussianodo.cpp 
+                src/odom_estimation_node.cpp
+)
 target_link_libraries(robot_pose_ekf
     ${catkin_LIBRARIES}
     ${Boost_LIBRARIES}
     ${BFL_LIBRARIES}
     )
-add_dependencies(robot_pose_ekf ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(robot_pose_ekf 
+    ${${PROJECT_NAME}_EXPORTED_TARGETS} 
+    ${catkin_EXPORTED_TARGETS})
 
 install(
     TARGETS
