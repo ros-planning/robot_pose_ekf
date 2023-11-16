@@ -487,6 +487,10 @@ namespace estimation
         my_filter_.initialize(vo_meas_, vo_stamp_);
         ROS_INFO("Kalman filter initialized with vo measurement");
       }
+      else if ( imu_active_ && !gps_used_ && !my_filter_.isInitialized()){
+        my_filter_.initialize(imu_meas_, imu_stamp_);
+        ROS_INFO("Kalman filter initialized with imu measurement");
+      }
     }
   };
 
